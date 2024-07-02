@@ -8,6 +8,8 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import { Provider } from "react-redux";
 import { store } from "./Redux/store.ts";
+
+//import ProtectedRoute from "./Hooks/ProtectedRoute.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,13 +19,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("/data.json"),
       },
-      // {
-      //   path: "/:dataId",
-      //   element: <Single />,
-      //   loader: ({ params }) => fetch(`/data/${params.dataId}.json`),
-      // },
     ],
   },
 ]);
