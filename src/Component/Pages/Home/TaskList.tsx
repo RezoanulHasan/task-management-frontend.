@@ -110,10 +110,10 @@ const TaskList: React.FC = () => {
     <>
       <AddTasks />
       <div className="max-w-4xl mx-auto mt-10 bg-gray-800 text-white p-10 m-4 border-white rounded-2xl">
-        <h2 className="text-4xl lg:text-center md:text-center xl:text-center font-bold mb-4">
+        <h2 className="text-4xl lg:text-center md:text-center xl:text-center font-extrabold uppercase mb-4">
           Total Tasks - {totalTasks}{" "}
         </h2>
-        <h1 className="text-accent text-center text-2xl font-bold">
+        <h1 className="text-accent text-center text-2xl font-extrabold uppercase">
           {TaskCountPerPage} Tasks
         </h1>
 
@@ -125,7 +125,7 @@ const TaskList: React.FC = () => {
                 className="border rounded-lg p-4 my-2 shadow-md flex flex-col sm:flex-row items-start sm:items-center justify-between transition duration-500 ease-in-out transform hover:scale-105"
               >
                 <div className="flex-grow">
-                  <h3 className="text-xl  font-bold ">
+                  <h3 className="text-xl  font-extrabold uppercase">
                     Title:<span className="text-teal-500">{task.title}</span>
                   </h3>
                   <p className="">Description:{task.description}</p>

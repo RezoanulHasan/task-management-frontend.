@@ -48,12 +48,12 @@ const AddTasks: React.FC = () => {
   return (
     <Container>
       <div className="mt-8  bg-black t p-10 m-4  rounded-2xl">
-        <h2 className="text-2xl mb-4 text-teal-500 text-center font-bold ">
-          New Task
+        <h2 className="text-2xl mb-4 text-white text-center font-extrabold ">
+          ADD TASK HERE
         </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label className="block mb-2">
-            Title:
+            <p className="text-white">Title:</p>
             <input
               type="text"
               {...register("title", { required: "Title is required." })}
@@ -69,7 +69,8 @@ const AddTasks: React.FC = () => {
             )}
           </label>
           <label className="block mb-2">
-            Description:
+            <p className="text-white"> Description:</p>
+
             <textarea
               {...register("description", {
                 required: "Description is required.",

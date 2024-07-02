@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import SectionTitle from "../../Shared/SectionTitle/SectionTitle";
 
 import TaskList from "./TaskList";
+import Banner from "./Banner";
 
 const Home = () => {
   useTitle("Home"),
@@ -12,7 +13,8 @@ const Home = () => {
     }, []);
 
   return (
-    <div>
+    <div className="overflow-hidden">
+      <Banner></Banner>
       <SectionTitle
         subHeading="Boost Your Efficiency"
         heading="START YOUR TASK JOURNEY!"
