@@ -1,0 +1,23 @@
+
+
+     <input
+                type="text"
+                value={task.title}
+                onChange={(e) =>
+                  handleUpdateTask(task._id!, { title: e.target.value })
+                }
+                className="border-b-2 border-gray-300 focus:outline-none focus:border-blue-500 mb-2"
+              />
+              <textarea
+                value={task.description}
+                onChange={(e) =>
+                  handleUpdateTask(task._id!, { description: e.target.value })
+                }
+                className="border-2 border-gray-300 focus:outline-none focus:border-blue-500 mb-2"
+              />
+
+
+
+
+
+
