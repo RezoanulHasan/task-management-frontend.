@@ -7,7 +7,7 @@ import {
   useGetAllTasksQuery,
 } from "../../../Redux/features/auth/taskApi";
 import Container from "../../Shared/Container";
-
+//  <div className="mt-8  bg-black t p-10 m-4  rounded-2xl">
 const AddTasks: React.FC = () => {
   const {
     register,
@@ -47,13 +47,21 @@ const AddTasks: React.FC = () => {
 
   return (
     <Container>
-      <div className="mt-8  bg-black t p-10 m-4  rounded-2xl">
+      <div
+        className="mt-8 relative p-10 m-4 rounded-2xl bg-cover h-full w-full"
+        style={{
+          backgroundImage:
+            "url(https://i.pinimg.com/736x/7b/b4/43/7bb4439e279301729e27d2f83e33daf4.jpg)",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
         <h2 className="text-2xl mb-4 text-white text-center font-extrabold ">
           ADD TASK HERE
         </h2>
         <form onSubmit={handleSubmit(onSubmit)}>
           <label className="block mb-2">
-            <p className="text-white">Title:</p>
+            <p className="text-white font-extrabold ">TITLE:</p>
             <input
               type="text"
               {...register("title", { required: "Title is required." })}
@@ -69,7 +77,10 @@ const AddTasks: React.FC = () => {
             )}
           </label>
           <label className="block mb-2">
-            <p className="text-white"> Description:</p>
+            <p className="text-white font-extrabold  uppercase">
+              {" "}
+              Description:
+            </p>
 
             <textarea
               {...register("description", {

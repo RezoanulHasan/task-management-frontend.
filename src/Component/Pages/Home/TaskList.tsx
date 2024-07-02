@@ -109,7 +109,8 @@ const TaskList: React.FC = () => {
   return (
     <>
       <AddTasks />
-      <div className="max-w-4xl mx-auto mt-10 bg-gray-800 text-white p-10 m-4 border-white rounded-2xl">
+
+      <div className="max-w-4xl mx-auto mt-10  bg-cover h-full w-full bg-black  text-white p-10 m-4 border-white rounded-2xl ">
         <h2 className="text-4xl lg:text-center md:text-center xl:text-center font-extrabold uppercase mb-4">
           Total Tasks - {totalTasks}{" "}
         </h2>
@@ -126,7 +127,7 @@ const TaskList: React.FC = () => {
               >
                 <div className="flex-grow">
                   <h3 className="text-xl  font-extrabold uppercase">
-                    Title:<span className="text-teal-500">{task.title}</span>
+                    Title: <span className="text-teal-500">{task.title}</span>
                   </h3>
                   <p className="">Description:{task.description}</p>
                   <p className="mb-2">

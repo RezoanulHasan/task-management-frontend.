@@ -7,7 +7,7 @@ const Footer = () => {
       <p className="text-center  text-teal-500  font-bold">
         rezoanulhasan96@gmail.com | +8801734639066
       </p>
-      <p className="text-center">Bangladesh.</p>
+      <p className="text-center uppercase">Bogra,Bangladesh</p>
     </div>
   );
 };
