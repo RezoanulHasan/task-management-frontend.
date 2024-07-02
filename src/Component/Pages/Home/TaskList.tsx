@@ -8,15 +8,11 @@ import {
 import Spinner from "../../Shared/Spinner/Spinner";
 import { useTaskHelpers } from "./helper";
 import AddTasks from "./AddTasks";
-import { useDebounced } from "../../../Redux/help";
 
 const TaskList: React.FC = () => {
   const [tasks, setTasks] = useState<Tasks[]>([]);
   const [page, setPage] = useState<number>(1);
   const [limit] = useState<number>(10);
-  const [searchTerm, setSearchTerm] = useState<string>("");
-
-  const debouncedTerm = useDebounced({ searchQuery: searchTerm, delay: 600 });
 
   const {
     data: response,
@@ -26,9 +22,6 @@ const TaskList: React.FC = () => {
   } = useGetAllTasksQuery({
     page,
     limit,
-    sortBy: "createdAt",
-    sortOrder: "asc",
-    searchTerm: debouncedTerm,
   });
 
   const { handleDeleteTask, handleUpdateTask } = useTaskHelpers();
@@ -117,18 +110,13 @@ const TaskList: React.FC = () => {
     <>
       <AddTasks />
       <div className="max-w-4xl mx-auto mt-10 bg-gray-800 text-white p-10 m-4 border-white rounded-2xl">
-        <div className="flex justify-start lg:justify-end md:justify-end xl:justify-end items-center mt-4 mb-5">
-          <input
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="appearance-none border mb-10 border-gray-300 rounded-md py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:border-indigo-500"
-            placeholder="Search Tasks"
-            style={{ minWidth: "10rem" }}
-          />
-        </div>
         <h2 className="text-4xl lg:text-center md:text-center xl:text-center font-bold mb-4">
           Total Tasks - {totalTasks}{" "}
-          <span className="text-accent">Showing {TaskCountPerPage} Tasks</span>
         </h2>
+        <h1 className="text-accent text-center text-2xl font-bold">
+          {TaskCountPerPage} Tasks
+        </h1>
+
         {tasks.length > 0 ? (
           <ul>
             {tasks.map((task: Tasks) => (
@@ -203,7 +191,7 @@ const TaskList: React.FC = () => {
           </div>
         )}
 
-        <div className="flex justify-start lg:justify-end md:justify-end xl:justify-end items-center mt-4 mb-5">
+        <div className="flex justify-start lg:justify-end md:justify-end xl:justify-end items-center mt-8 mb-5">
           <button
             className={`join-item btn btn-outline bg-white mr-2 px-4 py-2 rounded-md ${
               page === 1 ? "opacity-50 cursor-not-allowed" : ""
@@ -214,9 +202,9 @@ const TaskList: React.FC = () => {
             Previous Page
           </button>
 
-          <span className="text-white text-xl font-bold md:mx-auto lg:mx-auto xl:mx-auto">
-            Page - {page}
-          </span>
+          <button className=" text-xl font-bold md:mx-auto lg:mx-auto xl:mx-auto btn mr-2 px-4 py-2 ">
+            {page}
+          </button>
 
           <button
             className={`join-item btn btn-outline mr-2 px-4 py-2 rounded-md bg-white ${
