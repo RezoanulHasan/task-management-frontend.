@@ -13,7 +13,7 @@ const Home = () => {
     }, []);
 
   return (
-    <div className="mt-2 rounded-2xl overflow-hidden">
+    <div className="mt-1 rounded-2xl overflow-hidden">
       <Banner></Banner>
       <SectionTitle
         subHeading="Boost Your Efficiency"

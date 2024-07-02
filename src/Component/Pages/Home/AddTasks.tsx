@@ -1,12 +1,13 @@
 import React from "react";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
+
+import Container from "../../Shared/Container";
 import {
   Tasks,
   useAddTaskMutation,
   useGetAllTasksQuery,
-} from "../../../Redux/features/auth/taskApi";
-import Container from "../../Shared/Container";
+} from "../../../Redux/features/tasks/taskApi";
 //  <div className="mt-8  bg-black t p-10 m-4  rounded-2xl">
 const AddTasks: React.FC = () => {
   const {

@@ -9,7 +9,6 @@ import { Provider } from "react-redux";
 import { store } from "./Redux/store.ts";
 import Home from "./Component/Pages/Home/Home.tsx";
 
-//import ProtectedRoute from "./Hooks/ProtectedRoute.tsx";
 const router = createBrowserRouter([
   {
     path: "/",

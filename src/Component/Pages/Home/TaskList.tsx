@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { FaTrash, FaCheck, FaEdit } from "react-icons/fa";
-import {
-  useGetAllTasksQuery,
-  Tasks,
-} from "../../../Redux/features/auth/taskApi";
+
 import Spinner from "../../Shared/Spinner/Spinner";
 import { useTaskHelpers } from "./helper";
 import AddTasks from "./AddTasks";
+import {
+  Tasks,
+  useGetAllTasksQuery,
+} from "../../../Redux/features/tasks/taskApi";
 
 const TaskList: React.FC = () => {
   const [tasks, setTasks] = useState<Tasks[]>([]);
