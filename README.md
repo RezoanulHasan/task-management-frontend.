@@ -1,5 +1,5 @@
 # Task Management Web Application
-# Name: TaskHub
+# Project Name: TaskHub
 This project is a web application for managing tasks. It consists of a front-end interface built with React and a back-end server built with Node.js and Express. Tasks are stored in a MongoDB database to provide persistence.
 
 ## Overview
@@ -17,7 +17,7 @@ The application is responsive and works well on both desktop and mobile devices.
 
 ## [Live Website Link](https://taskshubrezoanul.netlify.app/)
 
-## [Post Man Documentation : Link](https://documenter.getpostman.com/view/30665703/2sA3dvmDSh)
+## [Post Man Documentation: Link](https://documenter.getpostman.com/view/30665703/2sA3dvmDSh)
 
 ## [Server Git Link ](https://github.com/RezoanulHasan/task-management-backend)
 
@@ -33,7 +33,7 @@ The application is responsive and works well on both desktop and mobile devices.
 - Node js
 - Express js
 - Mongoose
-- Mongodb
+- MongoDB
 - typescript
 - Zod (validation)
 - eslint ( code formatting and quality checking )
@@ -45,7 +45,7 @@ The application is responsive and works well on both desktop and mobile devices.
 
 ### `GET /tasks`
 
-Retrieve a list of all tasks.
+Retrieve a list of all tasks with pagination.
 
 **Response:**
 - 200 OK: Returns an array of task objects.
@@ -68,7 +68,7 @@ Create a new task.
 **Request Body:**
 - `title` (string): The title of the task.
 - `description` (string): The description of the task.
-- `completed` (boolean): The completion status of the task (optional, default is `false`).
+
 
 **Response:**
 - 201 Created: Returns the created task object.
@@ -84,7 +84,7 @@ Update an existing task by its ID.
 **Request Body:**
 - `title` (string): The new title of the task.
 - `description` (string): The new description of the task.
-- `completed` (boolean): The new completion status of the task.
+
 
 **Response:**
 - 200 OK: Returns the updated task object.
@@ -117,6 +117,6 @@ For any information, please reach out to:
 - Email: rezoanulhasan96@gmail.com
 - Phone: +088 01734639066
 
-Feel free to explore the website and enjoy your experience with  Task Managemen System
+Feel free to explore the website and enjoy your experience with  Task Management System
 
 
