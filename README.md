@@ -1,5 +1,5 @@
 # Task Management Web Application
-
+# Name: TaskHub
 This project is a web application for managing tasks. It consists of a front-end interface built with React and a back-end server built with Node.js and Express. Tasks are stored in a MongoDB database to provide persistence.
 
 ## Overview
@@ -38,7 +38,70 @@ The application is responsive and works well on both desktop and mobile devices.
 - Zod (validation)
 - eslint ( code formatting and quality checking )
 - prettier (maintain code structure)
-  
+
+
+
+  ## API Endpoints
+
+### `GET /tasks`
+
+Retrieve a list of all tasks.
+
+**Response:**
+- 200 OK: Returns an array of task objects.
+
+### `GET /tasks/:id`
+
+Retrieve a specific task by its ID.
+
+**Parameters:**
+- `id` (string): The ID of the task to retrieve.
+
+**Response:**
+- 200 OK: Returns the task object if found.
+- 404 Not Found: If the task with the specified ID does not exist.
+
+### `POST /tasks`
+
+Create a new task.
+
+**Request Body:**
+- `title` (string): The title of the task.
+- `description` (string): The description of the task.
+- `completed` (boolean): The completion status of the task (optional, default is `false`).
+
+**Response:**
+- 201 Created: Returns the created task object.
+- 400 Bad Request: If the request body is invalid.
+
+### `PUT /tasks/:id`
+
+Update an existing task by its ID.
+
+**Parameters:**
+- `id` (string): The ID of the task to update.
+
+**Request Body:**
+- `title` (string): The new title of the task.
+- `description` (string): The new description of the task.
+- `completed` (boolean): The new completion status of the task.
+
+**Response:**
+- 200 OK: Returns the updated task object.
+- 400 Bad Request: If the request body is invalid.
+- 404 Not Found: If the task with the specified ID does not exist.
+
+### `DELETE /tasks/:id`
+
+Delete a task by its ID.
+
+**Parameters:**
+- `id` (string): The ID of the task to delete.
+
+**Response:**
+- 200 OK: Returns a message indicating the task was deleted successfully.
+- 404 Not Found: If the task with the specified ID does not exist.
+
 ## Getting Started
 
 to set up and run projects locally
@@ -54,6 +117,6 @@ For any information, please reach out to:
 - Email: rezoanulhasan96@gmail.com
 - Phone: +088 01734639066
 
-Feel free to explore the website and enjoy your experience with Electric Gadgets Management System
+Feel free to explore the website and enjoy your experience with  Task Managemen System
 
 
