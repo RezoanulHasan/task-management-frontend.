@@ -52,7 +52,7 @@ const AddTasks: React.FC = () => {
         className="mt-8 relative p-10 m-4 rounded-2xl bg-cover h-full w-full"
         style={{
           backgroundImage:
-            "url(https://i.pinimg.com/736x/7b/b4/43/7bb4439e279301729e27d2f83e33daf4.jpg)",
+            "url(https://i.ibb.co/tZZDmS1/7bb4439e279301729e27d2f83e33daf4.jpg)",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

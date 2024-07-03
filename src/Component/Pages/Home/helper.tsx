@@ -3,7 +3,7 @@ import {
   Tasks,
   useDeleteTaskByIdMutation,
   useUpdateTaskByIdMutation,
-} from "../../../Redux/features/auth/taskApi";
+} from "../../../Redux/features/tasks/taskApi";
 
 export const useTaskHelpers = () => {
   const [deleteTaskById] = useDeleteTaskByIdMutation();
